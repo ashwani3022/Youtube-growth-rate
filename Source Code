@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Growth {
+
+    public static void main(String[] args) {
+        // y = a(1 + r)^x
+        // a = intial value
+        // r = growth rate
+        // d = decrease rate
+        // x = time interval
+
+        System.out.println("Let's calculate subs!");
+        System.out.println("This program uses y = a(1 + (r - d))^x ");
+
+        System.out.println("Enter initial value (a): ");
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+
+        System.out.println("Enter growth rate value (r): ");
+        double r = scan.nextDouble();
+
+        System.out.println("Enter decrease rate value (d): ");
+        double d = scan.nextDouble();
+
+
+        System.out.println("Enter time interval in month (x): ");
+        int x = scan.nextInt();
+
+        System.out.println(calculateSubs(a, r, x, d));
+
+
+    }
+    public static int calculateSubs(int a, double r, int x, double d) {
+        System.out.print(" Current Subcriber  ");
+
+        return (int) (a * Math.pow((1 + (r-d)), x) )  ;
+    }
+}
